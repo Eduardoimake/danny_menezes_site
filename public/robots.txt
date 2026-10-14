@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://SEU-PROJETO.pages.dev/sitemap.xml
+Sitemap: https://6acfed7910033d90651e83bc--delightful-alfajores-f6bae2.netlify.app/sitemap.xml
