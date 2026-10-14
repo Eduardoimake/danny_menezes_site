@@ -1,7 +1,228 @@
-﻿/*
- * Etapa 3:
- * Arquivo reservado para @keyframes, transições e melhorias opcionais
- * de animação aprovadas.
- *
- * Nesta etapa, o CSS original completo permanece em base.css.
- */
+﻿/* =========================================================
+   ANIMAÇÕES DO PRELOADER
+   ========================================================= */
+
+@keyframes loaderLine {
+  to {
+    left: 115%;
+  }
+}
+
+@keyframes preloaderPulse {
+  from {
+    transform: scale(0.96);
+    opacity: 0.75;
+  }
+
+  to {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+}
+
+@keyframes preloaderOrbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   ENTRADA DO HERO
+   ========================================================= */
+
+@keyframes heroIn {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes visualIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================================
+   MOVIMENTOS DECORATIVOS
+   ========================================================= */
+
+@keyframes slowFloat {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(-22px, 25px, 0) scale(1.04);
+  }
+}
+
+@keyframes organicFloat {
+  from {
+    transform: rotate(-18deg) translateY(0);
+  }
+
+  to {
+    transform: rotate(-9deg) translateY(-22px);
+  }
+}
+
+@keyframes archPulse {
+  from {
+    opacity: 0.5;
+    transform: scale(0.98);
+  }
+
+  to {
+    opacity: 0.95;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes stampFloat {
+  from {
+    transform: rotate(8deg) translateY(0);
+  }
+
+  to {
+    transform: rotate(2deg) translateY(-13px);
+  }
+}
+
+@keyframes stampRotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scrollLine {
+  0% {
+    transform: translateY(-110%);
+  }
+
+  58%,
+  100% {
+    transform: translateY(190%);
+  }
+}
+
+/* =========================================================
+   FAIXA DE IDENTIDADE
+   ========================================================= */
+
+@keyframes identityScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes stripShine {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 125%;
+  }
+}
+
+/* =========================================================
+   WHATSAPP FLUTUANTE
+   ========================================================= */
+
+@keyframes whatsappPulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(0.88);
+  }
+
+  75%,
+  100% {
+    opacity: 0;
+    transform: scale(1.28);
+  }
+}
+
+/* =========================================================
+   REVEALS
+   ========================================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition:
+    opacity 0.9s var(--ease),
+    transform 0.9s var(--ease);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.13s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.25s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.37s;
+}
+
+/* =========================================================
+   REDUÇÃO DE MOVIMENTO
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .preloader {
+    display: none;
+  }
+
+  .hero-content .eyebrow,
+  .hero-content h1,
+  .hero-content .lead,
+  .hero-actions,
+  .hero-trust,
+  .hero-visual,
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

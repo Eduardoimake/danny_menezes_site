@@ -33,7 +33,7 @@ const anotacoes = [
     alvo: "#contato",
     titulo: "Contato e localização",
     texto:
-      "A parte final concentra os caminhos para agendar pelo WhatsApp, visitar o Instagram e localizar o atendimento em Xerém e Mauá."
+      "A parte final concentra os caminhos para agendar pelo WhatsApp, visitar o Instagram e localizar o atendimento em Xerém."
   }
 ];
 
