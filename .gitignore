@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.*
+.DS_Store
+_legado/
+
+# Pastas locais e arquivos auxiliares preservados fora do repositório
+.venv/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.wrangler/
