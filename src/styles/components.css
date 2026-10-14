@@ -463,7 +463,7 @@
 }
 
 .footer-signature a {
-  display: block;
+  display: inline;
   color: var(--gold);
   font-weight: 700;
   text-decoration: none;
