@@ -409,24 +409,11 @@ h3 {
   gap: 20px;
 }
 
-.preloader__mark {
-  position: relative;
-  color: var(--gold);
-  font-family: var(--font-display);
-  font-size: clamp(4rem, 10vw, 7rem);
-  font-weight: 600;
-  letter-spacing: -0.1em;
-  line-height: 0.75;
+.preloader__logo {
+  display: block;
+  width: clamp(88px, 13vw, 140px);
+  height: auto;
   animation: preloaderPulse 1.5s var(--ease) infinite alternate;
-}
-
-.preloader__mark::before {
-  position: absolute;
-  inset: -18px -26px -15px;
-  border: 1px solid rgba(176, 138, 85, 0.48);
-  border-radius: 50%;
-  content: "";
-  transform: rotate(-16deg);
 }
 
 .preloader__label {
